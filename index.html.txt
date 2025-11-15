@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roblox Bootstrapper</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+<style>
+    body {
+        margin: 0;
+        font-family: "Outfit", sans-serif;
+        background: linear-gradient(135deg, #0f0f16, #1d1d2e);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 600px;
+        padding: 40px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 40px rgba(0,0,0,0.25);
+        text-align: center;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeUp 1.3s ease forwards;
+    }
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    h1 {
+        color: #ffffff;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: #cfcfcf;
+        font-size: 1rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .download-btn {
+        display: inline-block;
+        padding: 15px 40px;
+        border-radius: 50px;
+        background: linear-gradient(135deg, #5d5dfc, #4dc4ff);
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .download-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.35);
+    }
+
+    .floating {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background: rgba(255, 255, 255, 0.05);
+        filter: blur(60px);
+        border-radius: 50%;
+        animation: float 8s infinite ease-in-out alternate;
+    }
+
+    @keyframes float {
+        from { transform: translate(-30px, -20px); }
+        to { transform: translate(30px, 20px); }
+    }
+
+    .float1 { top: 5%; left: 10%; }
+    .float2 { bottom: 5%; right: 10%; }
+</style>
+</head>
+
+<body>
+<div class="floating float1"></div>
+<div class="floating float2"></div>
+
+<div class="container">
+    <h1>Roblox Bootstrapper</h1>
+    <p>
+        A cleaner, faster, smoother way to improve your Roblox experience.
+        Optimized startup, smarter caching, and a frictionless launch process.
+    </p>
+
+    <!-- Replace the MEGA link below -->
+    <a class="download-btn" href="https://mega.nz/your-file-link-here" target="_blank">
+        Download on MEGA
+    </a>
+</div>
+
+</body>
+</html>
